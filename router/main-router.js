@@ -9,6 +9,10 @@ router.get('/', controller.main)
 
 router.get('/profile', controller.profile)
 
+router.get('/contact', async (req, res) => {
+    res.render('contact')
+})
+
 router.get('/children', controller.children)
 
 router.get('/admin', controller.admin)
