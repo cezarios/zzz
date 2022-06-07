@@ -1,0 +1,19 @@
+.nbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4e0303;
+}
+.text {
+    color: white;
+    font-family: font Icon;
+}
+h1 {
+    color: rgb(255, 254, 254);
+    text-align: right;
+    font-family: Font Icon;
+    font-size: 21;
+    font-weight: normal;
+    padding: 0px 90px 0px 9px;
+}

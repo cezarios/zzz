@@ -1,0 +1,85 @@
+body {
+    background-color: #e2e1e1;
+  }
+
+ h1 {
+ color: rgb(0, 0, 0);
+ text-align: right;
+  font-family: Font Icon;
+  font-size: 21;
+  font-weight: normal;
+  padding: 0px 90px 0px 9px;
+    }
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #e2e1e1;
+    }
+ li {
+  float: left;
+    }
+    
+  li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-family: Font Icon;
+  padding: 16px 16px;
+  text-decoration: none;
+    }
+    
+ li a:hover {
+  background-color: #111;
+    }
+
+  h2 {
+  color: rgb(22, 21, 21);
+  text-align: center;
+  font-family: Font Icon;
+  font-size: 30px;
+  font-weight: normal;
+  }
+  
+body {
+  padding: 16px 32px;
+  text-align: center;
+  font-family: "Optima", sans-serif;
+  font-weight: normal;
+  font-size: 17px;
+    }
+    input[type=text] {
+      width: 70%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    input[type=email] {
+      width: 70%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    select[id=country] {
+      width: 70%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    textarea[id=question] {
+      width: 70%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #b6b6b6;
+      width: 15%;
+      font-family: "Optima", sans-serif;
+      font-weight: normal;
+      font-size: 15px;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }

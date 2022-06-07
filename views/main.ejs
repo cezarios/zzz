@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+    <title>Charity Fund</title>
+    <link rel="stylesheet" href="style main 2.css">
+</head>
+<body>
+<button onclick="notifyMe()">Notify me!</button>
+// we created a button for notifications
+<script>
+    window.addEventListener('load', function () {
+        var button = document.getElementsByTagName('button')[0];
+
+        if (window.self !== window.top) {
+            // we should be sure that  our doc is in frame, we get the user. Otherwise, it
+            // won't be able to request permission to send notifications.
+            button.textContent = "View live result of the example code above";
+            button.addEventListener('click', () => window.open(location.href));
+            return;
+        }
+
+        button.addEventListener('click', function () {
+            // If the user agreed to get notifications from us
+            // we try to send notifications to him.
+            if (window.Notification && Notification.permission === "granted") {
+                var i = 0;
+                var interval = window.setInterval(function () {
+                    var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+                    if (i++ == 9) {
+                        window.clearInterval(interval);
+                    }
+                }, 200);
+            } else if (window.Notification && Notification.permission !== "denied") {
+                Notification.requestPermission(function (status) {
+                    if (status === "granted") {
+                        var i = 0;
+                        var interval = window.setInterval(function () {
+                            var n = new Notification("Stay tuned of the latest updates! " + i, {tag: 'soManyNotification'});
+                            if (i++ == 9) {
+                                window.clearInterval(interval);
+                            }
+                        }, 200);
+                    } else {
+                        alert("Stay tuned of the latest updates!");
+                    }
+                });
+            } else {
+                alert("Hi!");
+            }
+        });
+    });
+</script>
+
+<div class="nbar" style="padding: 16px; margin: 16px; text-align: center; font-size: 24px">
+    <a style="margin: 10px" class="active text" href="/">Home</a>
+    <a style="margin: 10px" class="text" href="script — копия 3.html">Contact</a>
+    <a style="margin: 10px" class="text" href="/profile">Profile</a>
+    <h1>C A N C E R | F U N D</h1>
+</div>
+<script>
+    var audio = new Audio('mainpage.mp3')
+    audio.play();
+
+</script>
+<h2>CANCER</h2>
+<div id="form">
+
+    <p id="demo"></p>
+    <script>
+        var x = document.getElementById("myBtn");
+        x.addEventListener("mouseover", myFunction);
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = '1913';
+        }
+    </script>
+
+
+    <a href="our project.html" target=" _self">
+        <p>
+            <img src="https://st.focusedcollection.com/13422768/i/650/focused_308618126-stock-photo-abstract-purple-colored-cancer-cell.jpg"
+                 alt="Prada.com" style="float:right;width:440px;height:200px; padding: 10px 30px 10px 150px;">
+        </p>
+    </a>
+
+    <p style="color:rgb(252, 251, 251);
+      padding: 10px 600px 10px 30px;">Cancer (malignant tumor) is a disease in which some of the body's cells grow
+        uncontrollably and spread to other parts of the body. Cancer is a genetic disease - that is, it is caused by
+        changes to genes that control the way our cells function, especially how they grow and divide. Genetic changes
+        that cause cancer can happen because:</p>
+    <ol style="color:rgb(247, 243, 243);padding: 5px 600px 10px 30px;">
+        <li>of errors that occur as cells divide.</li>
+        <li>of damage to DNA caused by harmful substances in the environment, such as the chemicals in tobacco smoke and
+            ultraviolet rays from the sun. (Our Cancer Causes and Prevention section has more information.
+        </li>
+        <li>they were inherited from our parents.</li>
+    </ol>
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3>STATISTICS</h3>
+
+    <div id="foorm"></div>
+
+    <p id="domo"></p>
+    <script>
+        var x = document.getElementById("myBotn");
+        x.addEventListener("mouseover", myFunction1);
+
+        function myFunction1() {
+            document.getElementById("domo").innerHTML = '1915';
+        }
+    </script>
+    <a href="2index.html" target=" _self">
+        <p><img src=" https://i.pinimg.com/474x/10/ac/7a/10ac7aada98d9bf8de31562fecc6773f.jpg" alt="Smiley face"
+                style="float:right;width:310px;height:420px; padding: 10px 90px 10px 170px;">
+        </p>
+    </a>
+    <p style="color:rgb(253, 250, 250);
+      padding: 40px 600px 10px 30px;">Founded by Christian Dior, born January 1905, the fashion house was established in
+        December 1946 at 30 Avenue Montaigne in Paris. Dior's first collection launched on February 12th for Spring /
+        Summer 1947 at the company's head quarters. An instant success, Harper's Bazaar Editor-In-Chief Carmel Snow
+        strongly believed in Dior's talent. "It's quite a revolution, dear Christian! Your dresses have such a new
+        look," she exclaimed. Thus, the "New Look" became a trademark. Introducing unique silhouettes consisting of
+        shorter, fuller skirts, tighter waists, and accentuated busts - Dior's pieces were revolutionary, especially in
+        the 40s. "I wanted my dresses to be 'constructed', moulded on the curves of the female body whose contours they
+        would stylish. I accentuated the waist, the volume of the hips, and I emphasized the bust. In order to give my
+        designs more hold, I had nearly all the fabrics lined with percale of taffeta, renewing a tradition that had
+        long been abandoned," said Christian Dior.</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h4>HELP THEM</h4>
+    <div id="fooorm"></div>
+    <p id="dumo"></p>
+    <script>
+        var x = document.getElementById("myButn");
+        x.addEventListener("mouseover", myFunction2);
+
+        function myFunction2() {
+            document.getElementById("dumo").innerHTML = '1909';
+        }
+    </script>
+    <a href="/children" target=" _self">
+        <p><img src=" https://i.pinimg.com/736x/8d/a7/07/8da707ad9b8e060357d4227d7a99e596.jpg" alt="Prada.com"
+                style="float:right;width:440px;height:300px; padding: 1px 50px 10px 170px;">
+        </p>
+    </a>
+
+    <p style="color:rgb(255, 255, 255);
+padding: 10px 600px 10px 30px;">The start of Chanel Around the age of 18, Coco became interested in fashion. It all
+        really started in 1909. At the time she was the mistress of a businessman named Etienne Balsan, he gave her the
+        financial support she needed to open a hat-making shop in Paris. Another man, one of the wealthier friends of
+        Etienne Balsan, named Arthur Capel, is also known to have had a huge influence on the beginning of the fashion
+        venture of Coco Chanel. Eventually she opened more shops, where she also started making clothes. The House of
+        Chanel was officially born. Coco once told author Paul Morand that her first taste of clothing success came from
+        a dress she fashioned out of an old jersey. Many people asked here where she bought the dress, and her response
+        was the offer to make the same dress for them.</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.954393332498!2d71.41613421564075!3d51.09084917956878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585a605525605%3A0x4dff4a1973f7567e!2sAstana%20IT%20University!5e0!3m2!1sen!2skz!4v1654598801195!5m2!1sen!2skz"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>

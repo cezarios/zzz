@@ -1,0 +1,28 @@
+form{
+    display: block;
+    width: 100%;
+  }
+  button {
+    position: relative;
+   
+    background-color: #b6b6b6;
+    width: 15%;
+    font-family: "Optima", sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  #cw {
+    position: fixed;
+    z-index: -1;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+   

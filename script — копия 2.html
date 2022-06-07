@@ -1,0 +1,174 @@
+<!Doctype html PUBLIC> 
+<html>
+ <head>
+   <title>Charity Fund</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+  
+
+   <ul>
+      <li><a class="active" href="main 2.html">Home</a></li>
+      <li><a href="script - копия 2.html">Contact</a></li>
+      <h1>C A N C E R | F U N D</h1>
+    </ul>
+
+    <h2>DONATION FORM</h2>
+    <form onsubmit="return false">
+    </form>
+    
+    <input type="text" placeholder="Name" id="lastName" />
+<br><br>
+<input type="text" placeholder="Last Name" id="firstName" />
+<br><br>
+<input type="radio" id="male" name="gender" value="male"> Male
+<input type="radio" id="female" name="gender" value="female"> Female
+<br><br>
+<input type="email" placeholder="Email" id="email" />
+<input type="text" placeholder="Address" id="address" />
+<input type="text" placeholder="House number" id="houseNumber" />
+<select id="country">
+ <option disabled selected value> -- select a country -- </option>
+ <option value="Russia">Russia</option>
+ <option value="Kazakhstan">Kazakhstan</option>
+ <option value="USA">USA</option>
+ <option value="France">France</option>
+ <option value="Germany">Germany</option>
+ <option value="UK">UK</option>
+ <option value="Spain">Spain</option>
+ <option value="China">China</option>
+ <option value="Italy">Italy</option>
+</select>
+<br><br>
+<option disabled selected value> -- select a country -- </option>
+<input type="checkbox" id="newsletter" />Sign up to keep up with the latest fashion news
+<br><br>
+<span>What is your question?</span>
+<br>
+<textarea id="question" rows="4"></textarea>
+<br><br>
+<button onclick="top.location.href='main.html';"id="myBtn";>Send Contact</button>
+<script>
+  function setCookie(cname,cvalue,exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+  
+  function checkCookie() {
+    let user = getCookie("username");
+    if (user != "") {
+      alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+         setCookie("username", user, 30);
+       }
+    }
+  }
+  </script>
+</body>
+<script>
+let genderValue = male.checked ? "male" : "female"
+function getGender() {
+ return document.querySelector('input[name="gender"]:checked')
+}
+document.addEventListener("DOMContentLoaded", function() {
+ fields.firstName = document.getElementById('firstName');
+ fields.lastName = document.getElementById('lastName');
+ fields.email = document.getElementById('email');
+ fields.address = document.getElementById('address');
+ fields.houseNumber = document.getElementById('houseNumber');
+ fields.country = document.getElementById('country');
+ fields.password = document.getElementById('password');
+ fields.passwordCheck = document.getElementById('passwordCheck');
+ fields.newsletter = document.getElementById('newsletter');
+ fields.question = document.getElementById('question');
+})
+function isNotEmpty(value) {
+ if (value == null || typeof value == 'undefined' ) return false;
+ return (value.length > 0);
+}
+function isNumber(num) {
+ return (num.length > 0) && !isNaN(num);
+}
+function isEmail(email) {
+ let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+ return regex.test(String(email).toLowerCase());
+}
+function isPasswordValid(password) {
+ if (password.length > 5) {
+ return true;
+ }
+ return false
+}
+function fieldValidation(field, validationFunction) {
+ if (field == null) return false;
+
+ let isFieldValid = validationFunction(field.value)
+ if (!isFieldValid) {
+ field.className = 'placeholderRed';
+ } else {
+ field.className = '';
+ }
+
+ return isFieldValid;
+}
+function isValid() {
+ var valid = true;
+ 
+ valid &= fieldValidation(fields.firstName, isNotEmpty);
+ valid &= fieldValidation(fields.lastName, isNotEmpty);
+ valid &= fieldValidation(fields.gender, isNotEmpty);
+ valid &= fieldValidation(fields.address, isNotEmpty);
+ valid &= fieldValidation(fields.country, isNotEmpty);
+ valid &= fieldValidation(fields.email, isEmail);
+ valid &= fieldValidation(fields.houseNumber, isNumber);
+ valid &= fieldValidation(fields.password, isPasswordValid);
+ valid &= fieldValidation(fields.passwordCheck, isPasswordValid);
+ valid &= fieldValidation(fields.question, isNotEmpty);
+ valid &= arePasswordsEqual();
+
+ return valid;
+}
+function arePasswordsEqual() {
+ if (fields.password.value == fields.passwordCheck.value) {
+ field.password.className = 'placeholderRed';
+ field.passwordCheck.className = 'placeholderRed';
+ return true;
+ }
+ return false
+}
+class User {
+ constructor(firstName, lastName, gender, address, country, email, newsletter, question) {
+ this.firstName = firstName;
+ this.lastName = lastName;
+ this.gender = gender;
+ this.address = address;
+ this.country = country;
+ this.email = email;
+ this.newsletter = newsletter;
+ this.question = question;
+ }
+}
+
+</script>
+</body>
+</html>
